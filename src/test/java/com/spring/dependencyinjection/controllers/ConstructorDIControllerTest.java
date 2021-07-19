@@ -1,10 +1,8 @@
 package com.spring.dependencyinjection.controllers;
 
-import com.spring.dependencyinjection.services.GreetingServiceImpl;
+import com.spring.dependencyinjection.services.PropertyService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class ConstructorDIControllerTest {
 
@@ -12,7 +10,7 @@ class ConstructorDIControllerTest {
 
     @BeforeEach
     void setUp() {
-        constructorDIController  = new ConstructorDIController( new GreetingServiceImpl() );
+        constructorDIController  = new ConstructorDIController( new PropertyService() );
     }
 
     @Test

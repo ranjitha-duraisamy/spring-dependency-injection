@@ -1,10 +1,8 @@
 package com.spring.dependencyinjection.controllers;
 
-import com.spring.dependencyinjection.services.GreetingServiceImpl;
+import com.spring.dependencyinjection.services.PropertyService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class PropertyDIControllerTest {
 
@@ -13,7 +11,7 @@ class PropertyDIControllerTest {
     @BeforeEach
     void setUp() {
         propertyDIController = new PropertyDIController();
-        propertyDIController.greetingService = new GreetingServiceImpl();
+        propertyDIController.greetingService = new PropertyService();
     }
 
     @Test
